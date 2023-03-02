@@ -26,6 +26,8 @@ jobs:
         pip install twine
         pip install wheel
         pip install setuptools
+        pip install six
+        pip install "pycifrw>=4.4.3"
 
     - name: Build wheels
       run: |
