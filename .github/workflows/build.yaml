@@ -13,10 +13,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - name: Check-out repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
         cache: 'pip' # caching pip dependencies
@@ -52,7 +52,7 @@ jobs:
         body: This is an alpha build of the diffpy.structure library (0.0.0)
 
     - name: Checkout target repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       env:
         REPO: easyScience/pypi
         REPO_PATH: pypi
